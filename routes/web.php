@@ -14,6 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::post('/test', function () {
+  $user = App\User::findOrFail(1);
+  event(new App\Events\SmartAdsEvent($user));
+});
 
 Auth::routes();
 

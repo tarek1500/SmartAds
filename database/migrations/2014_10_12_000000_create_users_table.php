@@ -17,14 +17,15 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('email')->unique();
-            $table->string('mobile', 15)->unique();
+            $table->string('mobile', 11)->unique();
             $table->string('password');
-            $table->string('security');
-            $table->enum('gender', ['male', 'female']);
-            $table->string('address');
+            //$table->string('security');
+            //$table->enum('gender', ['male', 'female']);
+            //$table->string('address');
             $table->enum('role', ['user', 'admin']);
-            $table->float('balance', 8, 3);
+            $table->integer('balance')->default(0);
             $table->rememberToken();
+            $table->boolean('confirmed')->default(false);
             $table->timestamps();
         });
     }

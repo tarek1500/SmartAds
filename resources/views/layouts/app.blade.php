@@ -76,5 +76,17 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script>
+    $(function() {
+      Echo.channel('room.1')
+    .listen('SmartAdsEvent', (e) => {
+        console.log(e);
+    });
+      // Echo.private(`user.${id}`)
+      //   .listen('SmartAdsEvent', (e) => {
+      //     console.log(e.user);
+      //   });
+    });
+    </script>
 </body>
 </html>
