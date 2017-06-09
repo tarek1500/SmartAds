@@ -13,13 +13,13 @@ class AdminAccountsSeeder extends Seeder
     public function run()
     {
         User::create([
-        'name' => 'Mostafa Ellethy',
-        'email' => 'admin@domain.com',
-        'password' => bcrypt('adminadmin'),
-        'mobile' => 01116264673,
-        'balance' => 1000000,
-        'role' => 'admin',
-        'confirmed' => true,
-      ]);
+            'name' => 'Mostafa Ellethy',
+            'email' => 'admin@domain.com',
+            'password' => bcrypt('adminadmin'),
+            'mobile' => 01116264673,
+            'balance' => 1000000,
+            'role' => 'admin',
+            'confirmed' => true,
+        ]);
     }
 }

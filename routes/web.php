@@ -14,11 +14,16 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::post('/test', function () {
-  $user = App\User::findOrFail(1);
-  event(new App\Events\SmartAdsEvent($user));
+    $user = App\User::findOrFail(1);
+    event(new App\Events\SmartAdsEvent($user));
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/cpanel', function () {
+	return view('cpanel.index');
+})->name('cpanel.index');

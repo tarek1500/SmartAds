@@ -36,8 +36,8 @@ class SmartAdsEvent implements ShouldBroadcastNow
     public function broadcastOn()
     {
         return [
-        'room.1'
-      ];
+            'room.1'
+        ];
         // return new PrivateChannel('user.'.$this->user->id);
     }
     // public function broadcastWith()

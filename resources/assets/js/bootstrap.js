@@ -7,9 +7,9 @@
  */
 
 try {
-  window.$ = window.jQuery = require('jquery');
+    window.$ = window.jQuery = require('jquery');
 
-  require('bootstrap-sass');
+    require('bootstrap-sass');
 } catch (e) {}
 
 /**
@@ -47,8 +47,8 @@ import Echo from 'laravel-echo'
 window.Pusher = require('pusher-js');
 
 window.Echo = new Echo({
-  broadcaster: 'pusher',
-  key: '81a980243722b3b335c6',
-  cluster: 'eu',
-  encrypted: true
+    broadcaster: 'pusher',
+    key: '81a980243722b3b335c6',
+    cluster: 'eu',
+    encrypted: true
 });
