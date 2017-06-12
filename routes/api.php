@@ -16,3 +16,8 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::post('/test', function (Request $request) {
+  dd(route('userActivation','asdfasdfadsf'));
+});
+Route::post('register', 'Auth\RegisterController@register')->name('register');
+Route::get('userActivation/{token}', 'Auth\UserActivationController@userActivation')->name('userActivation');

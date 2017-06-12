@@ -13,19 +13,12 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(App\User::class, function (Faker\Generator $faker) {
-    static $password, $security;
-
+    static $password;
     return [
         'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
-        'mobile' => $faker->e164PhoneNumber,
-        'password' => $password ?: $password = bcrypt('secret'),
-        'security' => $security ?: $security = bcrypt('secret'),
-        'gender' => $faker->randomElement($array = array ('male','female')),
-        'address' => $faker->address,
-        'role' => $faker->randomElement($array = array ('user','admin')),
-        'balance' => $faker->randomFloat(3, 0, 99999),
-        'remember_token' => str_random(10),
+        'email' => $faker->unique()->email,
+        'mobile' => $faker->randomNumber(9) . $faker->randomDigitNotNull(),
+        'password' => $password = bcrypt('secret'),
     ];
 });
 
