@@ -1,6 +1,6 @@
 @extends('cpanel.master')
 
-@section('title', config('app.name', 'Laravel'))
+@section('title', 'Control Panel - Dashboard')
 
 @section('css')
 	<link href="{{ asset('css/cpanel/index.css') }}" rel="stylesheet">

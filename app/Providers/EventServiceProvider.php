@@ -16,6 +16,9 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\SmartAdsEvent' => [
             'App\Listeners\SmartAdsEventListener',
         ],
+        'App\Events\StoreAds' => [
+            'App\Listeners\StoreAdsListener',
+        ],
     ];
 
     /**

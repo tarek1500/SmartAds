@@ -33,9 +33,9 @@
 			</div>
 			<i class="fa fa-bars fa-2x open-btn" data-toggle="collapse" data-target="#menu-content"></i>
 			<ul class="menu-content collapse out" id="menu-content">
-				<li id="dashboard-menu"><a href="#"><i class="fa fa-tachometer fa-fw fa-lg" aria-hidden="true"></i> Dashboard</a></li>
+				<li id="dashboard-menu"><a href="{{ route('cpanel.index') }}"><i class="fa fa-tachometer fa-fw fa-lg" aria-hidden="true"></i> Dashboard</a></li>
 				<li id="zones-menu"><a href="#"><i class="fa fa-desktop fa-fw fa-lg" aria-hidden="true"></i> Zones</a></li>
-				<li id="ads-menu"><a href="#"><i class="fa fa-video-camera fa-fw fa-lg" aria-hidden="true"></i> Ads</a></li>
+				<li id="ads-menu"><a href="{{ route('cpanel.ads.index') }}"><i class="fa fa-video-camera fa-fw fa-lg" aria-hidden="true"></i> Ads</a></li>
 				<li id="profile-menu"><a href="#"><i class="fa fa-user fa-fw fa-lg" aria-hidden="true"></i> Profile</a></li>
 				<li id="users-menu"><a href="#"><i class="fa fa-users fa-fw fa-lg" aria-hidden="true"></i> Users</a></li>
 				<li id="notifications-menu" data-toggle="collapse" data-target="#menu-nested-content" aria-expanded="false">

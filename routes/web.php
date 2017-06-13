@@ -27,3 +27,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/cpanel', function () {
 	return view('cpanel.index');
 })->name('cpanel.index');
+
+Route::resource('cpanel/ads', 'AdsController', ['names' => 'cpanel.ads']);
