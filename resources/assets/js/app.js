@@ -1,1 +1,0 @@
-// Application Javascript goes here.

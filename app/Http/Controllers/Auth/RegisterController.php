@@ -29,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -79,10 +79,8 @@ class RegisterController extends Controller
     public function register(Request $request)
     {
         $this->validator($request->all())->validate();
-        $user = $this->create($request->all());
-        dispatch(new SendActivationEmail($user));
-        return response()->json([
-          'success' => true
-        ]);
+        dispatch(new SendActivationEmail($user = $this->create($request->all())));
+        $this->guard()->login($user);
+        return ($user->role == 'admin') ? redirect()->route('admin.cpanel.index') : redirect()->route('cpanel.index');
     }
 }

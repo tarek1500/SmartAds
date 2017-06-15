@@ -13,9 +13,6 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\SmartAdsEvent' => [
-            'App\Listeners\SmartAdsEventListener',
-        ],
         'App\Events\StoreAds' => [
             'App\Listeners\StoreAdsListener',
         ],

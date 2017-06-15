@@ -6,5 +6,7 @@
   "/css/app.css": "/css/app.css",
   "/js/manifest.js": "/js/manifest.js",
   "/js/vendors.js": "/js/vendors.js",
-  "/js/bootstrap.js": "/js/bootstrap.js"
+  "/js/bootstrap.js": "/js/bootstrap.js",
+  "/mix.js": "/mix.js",
+  "/css/cpanel.css": "/css/cpanel.css"
 }
