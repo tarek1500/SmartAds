@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Ad extends Model
 {
@@ -12,16 +13,18 @@ class Ad extends Model
      * @var array
      */
     protected $fillable = [
-        'title', 'url', 'duration', 'status', 'price', 'user_id'
+        'name', 'path', 'user_id', 'size', 'duration'
     ];
+    protected $appends = [
+        'url'
+    ];
+    public function getUrlAttribute($value)
+    {
+        return Storage::url($this->attributes['path']);
+    }
 
 	public function User()
 	{
 		return $this->belongsTo('App\User');
-	}
-
-	public function Screens()
-	{
-		return $this->belongsToMany('App\Screen');
 	}
 }

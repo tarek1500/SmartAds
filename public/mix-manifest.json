@@ -8,5 +8,8 @@
   "/js/vendors.js": "/js/vendors.js",
   "/js/bootstrap.js": "/js/bootstrap.js",
   "/mix.js": "/mix.js",
-  "/css/cpanel.css": "/css/cpanel.css"
+  "/css/cpanel.css": "/css/cpanel.css",
+  "/css/admin/cpanel.css": "/css/admin/cpanel.css",
+  "/css/admin/ads.css": "/css/admin/ads.css",
+  "/js/admin/ads.js": "/js/admin/ads.js"
 }

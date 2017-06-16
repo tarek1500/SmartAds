@@ -13,7 +13,7 @@
 
   <!-- Styles -->
   <link href="{{ mix('css/core.css') }}" rel="stylesheet">
-  <link href="{{ mix('css/cpanel.css') }}" rel="stylesheet"> @yield('styles')
+  <link href="{{ mix('css/admin/cpanel.css') }}" rel="stylesheet"> @yield('styles')
 </head>
 
 <body>
@@ -26,11 +26,11 @@
     </div>
     <div class="list-group">
       <a href="{{route('admin.cpanel.index')}}" class="list-group-item dashboard"><i class="fa fa-tachometer fa-fw" aria-hidden="true"></i>Dashboard</a>
-      <a href="{{route('admin.cpanel.ads')}}" class="list-group-item ads"><i class="fa fa-file-video-o fa-fw" aria-hidden="true"></i>Ads</a>
+      <a href="{{route('admin.cpanel.ads')}}" class="list-group-item ads"><i class="fa fa-file-video-o fa-fw" aria-hidden="true"></i>Advertisements</a>
       <a href="{{route('admin.cpanel.playlists')}}" class="list-group-item playlists"><i class="fa fa-list-ol fa-fw" aria-hidden="true"></i>Playlists</a>
       <a href="{{route('admin.cpanel.screens')}}" class="list-group-item screens"><i class="fa fa-desktop fa-fw" aria-hidden="true"></i>Screens</a>
-      <a href="{{route('admin.cpanel.notifications')}}" class="list-group-item notifications"><i class="fa fa-bell-o fa-fw" aria-hidden="true"></i>Notifications</a>
-      <a href="{{route('admin.cpanel.logs')}}" class="list-group-item logs"><i class="fa fa-file-text-o fa-fw" aria-hidden="true"></i>Logs</a>
+      <a href="{{route('admin.cpanel.notifications')}}" class="list-group-item notifications"><i class="fa fa-bell-o fa-fw" aria-hidden="true"></i>Notifications </i><span class="badge notifications">4</span></a>
+      <a href="{{route('admin.cpanel.logs')}}" class="list-group-item logs"><i class="fa fa-file-text-o fa-fw" aria-hidden="true"></i>Activity Logs</a>
     </div>
   </div>
   <div id="page-content" class="pull-right">
@@ -51,7 +51,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li class="notifications dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                              <i class="fa fa-bell-o fa-fw" aria-hidden="true"></i>
+                              <i class="fa fa-bell-o fa-fw" aria-hidden="true"></i><span class="badge">4</span>
                           </a>
               <ul class="dropdown-menu" role="menu">
                 <li>

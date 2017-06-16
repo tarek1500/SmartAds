@@ -15,8 +15,10 @@ mix.browserSync('smartads');
 
 mix.setResourceRoot('../');
 mix.js('resources/assets/js/bootstrap.js', 'public/js/core.js')
+  .js('resources/assets/js/admin/ads.js', 'public/js/admin/ads.js')
   .sass('resources/assets/sass/app.scss', 'public/css/core.css')
-  .sass('resources/assets/sass/cpanel.scss', 'public/css/cpanel.css');
+  .sass('resources/assets/sass/admin/cpanel.scss', 'public/css/admin/cpanel.css')
+  .sass('resources/assets/sass/admin/ads.scss', 'public/css/admin/ads.css');
 // if (mix.config.inProduction) {
 //   mix.version();
 // }
